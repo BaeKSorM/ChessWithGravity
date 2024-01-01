@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class Rook : Horse
 {
+    public override void Pressed()
+    {
+        if (isMoveDirectionOn)
+        {
+            isMoveDirectionOn = false;
+            MoveDirectionOff();
+        }
+        else
+        {
+            CheckRookCanMoveTiles();
+            ActivateCanMoveTile();
+            isMoveDirectionOn = true;
+        }
+    }
     public override void MoveDirectionOn()
     {
         MoveDirectionOff();

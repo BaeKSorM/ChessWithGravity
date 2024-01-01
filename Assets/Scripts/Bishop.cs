@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class Bishop : Horse
 {
+    public override void Pressed()
+    {
+        if (isMoveDirectionOn)
+        {
+            isMoveDirectionOn = false;
+            MoveDirectionOff();
+        }
+        else
+        {
+            CheckBishopCanMoveTiles();
+            ActivateCanMoveTile();
+            isMoveDirectionOn = true;
+        }
+    }
     public override void MoveDirectionOn()
     {
         MoveDirectionOff();

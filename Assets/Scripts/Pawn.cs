@@ -5,6 +5,20 @@ using UnityEngine;
 public class Pawn : Horse
 {
     public bool isFirstMove;
+    public override void Pressed()
+    {
+        if (isMoveDirectionOn)
+        {
+            isMoveDirectionOn = false;
+            MoveDirectionOff();
+        }
+        else
+        {
+            CheckPawnCanMoveTiles();
+            ActivateCanMoveTile();
+            isMoveDirectionOn = true;
+        }
+    }
     public override void MoveDirectionOn()
     {
         MoveDirectionOff();

@@ -23,7 +23,17 @@ public class GameManager : MonoBehaviour
     public int rightUpLastTile;
     public int leftDownLastTile;
     public int rightDownLastTile;
-    public bool abcd;
+    public int betweenLeftAndLeftUpTile;
+    public int betweenLeftAndLeftDownTile;
+    public int betweenUpAndLeftUpTile;
+    public int betweenDownAndLeftDownTile;
+    public int betweenRightAndRightUpTile;
+    public int betweenRightAndRightDownTile;
+    public int betweenUpAndRightUpTile;
+    public int betweenDownAndRightDownTile;
+    public float downSpeed;
+    public float abs;
+    public int rayRange;
     void Awake()
     {
         if (Instance == null)
@@ -65,7 +75,7 @@ public class GameManager : MonoBehaviour
                     horseTransform.GetComponent<Pawn>().isFirstMove = false;
                 }
                 horseTransform.position = tileButtons[tileOrder].transform.position;
-                horseTransform.GetComponent<Rigidbody2D>().velocity = Vector2.down * 100;
+                horseTransform.GetComponent<Rigidbody2D>().velocity = Vector2.down * downSpeed;
                 break;
             }
         }
