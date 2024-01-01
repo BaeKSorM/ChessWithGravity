@@ -39839,7 +39839,7 @@ MonoBehaviour:
   betweenRightAndRightDownTile: 0
   betweenUpAndRightUpTile: 0
   betweenDownAndRightDownTile: 0
-  downSpeed: 1000
+  downSpeed: 0
   abs: 169
   rayRange: 47
 --- !u!1 &2056297015
